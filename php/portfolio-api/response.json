@@ -1,0 +1,46 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "pCyjq_xNpTCnkycczHR0r0U0BSI",
+  "nextPageToken": "CAEQAA",
+  "regionCode": "ID",
+  "pageInfo": {
+      "totalResults": 43,
+      "resultsPerPage": 1
+  },
+  "items": [
+      {
+          "kind": "youtube#searchResult",
+          "etag": "kYKGpXHToJ2GDnHDHu19eHZgDY8",
+          "id": {
+              "kind": "youtube#video",
+              "videoId": "jmLpmhd2ES0"
+          },
+          "snippet": {
+              "publishedAt": "2017-01-17T23:02:43Z",
+              "channelId": "UC68vIYW9zCpEdK3iuTFqg5A",
+              "title": "Maroon 5 Don&#39;t Wanna Know Song Video Cover",
+              "description": "Lyric this song Oh hey Oh, oh hey Oh, oh, oh hey Uh oh, uh oh I don't wanna know, know, know, know Who's taking you home, home, home, home And loving ...",
+              "thumbnails": {
+                  "default": {
+                      "url": "https://i.ytimg.com/vi/jmLpmhd2ES0/default.jpg",
+                      "width": 120,
+                      "height": 90
+                  },
+                  "medium": {
+                      "url": "https://i.ytimg.com/vi/jmLpmhd2ES0/mqdefault.jpg",
+                      "width": 320,
+                      "height": 180
+                  },
+                  "high": {
+                      "url": "https://i.ytimg.com/vi/jmLpmhd2ES0/hqdefault.jpg",
+                      "width": 480,
+                      "height": 360
+                  }
+              },
+              "channelTitle": "Hendri",
+              "liveBroadcastContent": "none",
+              "publishTime": "2017-01-17T23:02:43Z"
+          }
+      }
+  ]
+}

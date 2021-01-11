@@ -1,0 +1,207 @@
+html {
+    position: relative;
+}
+
+body {
+    margin-top: 30px;
+    margin-bottom: 120px;
+}
+
+.jumbotron {
+    height: 430px;
+    background-image: url('../img/coding.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -150px;
+    color: #eaeaea;
+    overflow: hidden;
+}
+
+.jumbotron img {
+    width: 200px;
+    border: 5px solid #eaeaea;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron h1,
+.jumbotron p {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+    width: 250px;
+    border-top: 3px solid rgb(219, 219, 219);
+}
+
+section {
+    min-height: 600px;
+}
+
+.pKiri,
+.pKanan {
+    opacity: 0;
+    transform: translate(-50px, 0) rotate(15deg);
+    transition: 1s;
+}
+
+.pKanan {
+    transform: translate(50px, 0) rotate(-15deg);
+}
+
+.pKiri.pMuncul,
+.pKanan.pMuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.portfolio {
+    background-color: #eee;
+}
+
+.portfolio .thumbnail {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: .8s;
+}
+
+.portfolio .thumbnail.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Bagian Gallery Portofolio */
+.gallery .overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: .7s;
+    border-radius: 0%;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.gallery .overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.gallery .overlay img {
+    border-radius: 0;
+    margin-top: 85px;
+    max-height: 100%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .7);
+}
+
+.gallery .overlay:target img {
+    /* animation: zoomAndFade 1s; */
+    animation: fadeArrow 1s;
+}
+
+.overlay .close {
+    text-decoration: none;
+    position: absolute;
+    color: white;
+    top: 100px;
+    left: 50%;
+    margin-left: -40px;
+    background-color: rgba(0, 0, 0, 0.171);
+    border: 1px solid white;
+    line-height: 14px;
+    padding: 10px;
+    opacity: 0;
+}
+
+.overlay:target .close {
+    animation: slideDownFade .5s .5s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+    animation: fadeArrow .5s .5s forwards;
+}
+
+.next,
+.prev {
+    width: 53px;
+    height: 88px;
+    background-image: url('../img/right-arrow.png');
+    position: absolute;
+    text-indent: -9999px;
+    top: 45%;
+    margin-left: 50px;
+    opacity: 0;
+}
+
+.prev {
+    background-image: url('../img/left-arrow.png');
+    top: 45%;
+    margin-left: -100px;
+}
+
+/* Akhir Gallery Portofolio */
+
+.contact {
+    min-height: 800px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #eee;
+    padding-top: 30px;
+}
+
+footer p {
+    color: rgb(44, 44, 44);
+    font-size: 0.9em;
+}
+
+footer p i {
+    color: salmon;
+}
+
+/* Animasi */
+@keyframes fadeArrow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomAndFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideDownFade {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}

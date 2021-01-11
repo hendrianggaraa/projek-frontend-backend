@@ -1,0 +1,12 @@
+CORS(Cross Origin Resource Sharing)
+
+1. Mekanisme yang membuat kita dapat mengakses sebuah resource(data, document, script) dari domain lain
+2. Caranya adalah dengan membuat server memperbolehkan adanya akses data dari luar domain.
+3. Modifikasi Access-Control-Allow-Origin
+4. Membuat file .htaccess
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+JSONP
